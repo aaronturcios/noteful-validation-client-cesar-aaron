@@ -7,7 +7,7 @@ import NotePageMain from "./components/NotePage/NotePageMain";
 import AddNote from "./components/AddNote/AddNote";
 import ApiContext from "./ApiContext";
 import AddFolder from "./components/AddFolder/AddFolder";
-import ErrorPage from './ErrorBoundary';
+import ErrorPage from './CatchError';
 import "./App.css";
 
 

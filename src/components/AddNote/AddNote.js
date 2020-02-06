@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import Form from '../Form';
-import UserContext from '../../Context';
+import ApiContext from '../../ApiContext';
 import './AddNote.css';
 
 export default class AddNote extends Component {
@@ -15,7 +14,7 @@ export default class AddNote extends Component {
     check: false
   }
 
-  static contextType = UserContext;
+  static contextType = ApiContext;
 
   
   handleInputName = (e) => {
