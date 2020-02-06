@@ -39,8 +39,8 @@ export default class AddFolder extends Component {
    render () {
        return (
            <section className='addFolderForm'>
-               <h2 class='header'>Make a new folder!</h2>
-               <form class='folder-farm' onSubmit={(e) => this.handleFolder(e)}>
+               <h2>Make a new folder!</h2>
+               <form onSubmit={(e) => this.handleFolder(e)}>
                    <input 
                         type='text'
                         placeholder='Folder Name'
