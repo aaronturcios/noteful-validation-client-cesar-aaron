@@ -1,0 +1,21 @@
+.NotePageNav {
+    height: 100%;
+    width: 100px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    border: 1px solid #888;
+    padding-top: 25px;
+    padding-left:5px;
+  }
+  
+  .NotePageNav > ul {
+    list-style: none;
+    padding: 5px;
+  }
+  
+  .NotePageNav > ul > li {
+    border: 1px solid #777;
+    margin: 0 auto;
+    padding: 4px;
+  }

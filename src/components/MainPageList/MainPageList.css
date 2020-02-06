@@ -1,0 +1,13 @@
+  
+.MainPageList {
+    margin-left: 110px;
+  }
+  
+  .MainPageList > ul {
+    list-style: none;
+  }
+  
+  .MainPageList > button {
+    margin-top: 25px;
+    margin-left: 40px;
+  }

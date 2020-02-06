@@ -1,0 +1,7 @@
+.NotePageMain {
+    margin-left: 150px;
+  }
+  
+  .NotePageMain > ul {
+    list-style: none;
+  }
