@@ -39,7 +39,7 @@ export default class AddNote extends Component {
     e.preventDefault();
 
     if (this.state.name === '') {
-      alert('Enter a name!!!')
+      alert('Please enter a name')
       this.setState({
         check: !this.state.check
       })
