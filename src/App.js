@@ -94,7 +94,7 @@ class App extends Component {
 
   renderSidebar() {
     console.log("sidebar rendered!");
-    const { notes, folders } = this.state;
+    
     return (
       <>
         {["/", "/folder/:folderId"].map(path => (

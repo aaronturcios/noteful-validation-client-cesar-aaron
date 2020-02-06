@@ -14,7 +14,7 @@ export default class MainPageNav extends React.Component {
   static contextType = ApiContext;
 
   render () {
-    const { folders=[], notes=[] } = this.context;
+    const { folders=[] } = this.context;
   return (
         <div className="MainPageNav">
           <ul>
