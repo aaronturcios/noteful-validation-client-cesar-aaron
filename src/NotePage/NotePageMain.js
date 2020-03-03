@@ -12,6 +12,10 @@ import './NotePageMain.css';
 
    static contextType = ApiContext;
 
+   handleDeleteNote = noteId => {
+     this.props.history.push(`/`)
+   }
+
    render () {
     const { notes=[] } = this.context
     const { noteId } = this.props.match.params
@@ -19,18 +23,19 @@ import './NotePageMain.css';
     
     return (
       
-          <section className='NotePageMain'>
-            <Note
-              id={note.id}
-              name={note.name}
-              modified={note.modified}
-            />
-            <div className='note-content'>
-              {note.content.split('/n').map((para, i) =>
-                <p key={i}>{para}</p>
-              )}
-            </div>
-          </section>
+      <section className='NotePageMain'>
+      <Note
+        id={note.id}
+        name={note.note_name}
+        modified={note.date_modified}
+        onDeleteNote={this.handleDeleteNote}
+      />
+      <div className='note_content'>
+        {note.content.split(/\n \r|\n/).map((para, i) =>
+          <p key={i}>{para}</p>
+        )}
+      </div>
+    </section>
         )}
     
 }

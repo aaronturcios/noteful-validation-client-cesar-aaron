@@ -2,6 +2,7 @@ import React from 'react';
 import './NotePageSidebar.css';
 import ApiContext from '../../ApiContext';
 import { findFolder, findNote } from '../../App';
+import CircleButton from '../CircleButton/CircleButton';
 
 class NotePageSidebar extends React.Component {
   static defaultProps = {
@@ -13,6 +14,7 @@ class NotePageSidebar extends React.Component {
     }
   }
   static contextType = ApiContext;
+  
   render () {
 
     const { notes, folders } = this.context
@@ -21,13 +23,17 @@ class NotePageSidebar extends React.Component {
     const folder = findFolder(folders, note.folderId)
     return (
             <div className='NotePageNav'>
-              <button
+              <CircleButton
                 tag='button'
                 role='link'
                 onClick={() => this.props.history.goBack()}
+                className='NotePageNav_back-button'
               >
+                <FontAwesomeIcon icon='chevron-left' />
+
+                <br />
                 Back
-              </button>
+              </CircleButton>
               {folder && (
                 <h3 className='NotePageNav__folder-name'>
                   {folder.name}
