@@ -1,7 +1,7 @@
 import React from 'react';
 import './NotePageSidebar.css';
-import ApiContext from '../../ApiContext';
-import { findFolder, findNote } from '../../App';
+import ApiContext from '../ApiContext';
+import { findFolder, findNote } from '../App';
 import CircleButton from '../CircleButton/CircleButton';
 
 class NotePageSidebar extends React.Component {

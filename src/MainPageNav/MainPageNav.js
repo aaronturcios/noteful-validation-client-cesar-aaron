@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import ApiContext from '../../ApiContext';
+import ApiContext from '../ApiContext';
 import './MainPageNav.css';
 
 export default class MainPageNav extends React.Component {

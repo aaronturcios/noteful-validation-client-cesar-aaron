@@ -1,8 +1,8 @@
   
 import React from 'react';
 import Note from '../Note/Note';
-import ApiContext from '../../ApiContext';
-import {findNote} from '../../App';
+import ApiContext from '../ApiContext';
+import {findNote} from '../App';
 import './NotePageMain.css';
 
  export default class NotePageMain extends React.Component {
@@ -20,22 +20,20 @@ import './NotePageMain.css';
     const { notes=[] } = this.context
     const { noteId } = this.props.match.params
     const note = findNote(notes, noteId) || {content: ''}
-    
     return (
-      
       <section className='NotePageMain'>
-      <Note
-        id={note.id}
-        name={note.note_name}
-        modified={note.date_modified}
-        onDeleteNote={this.handleDeleteNote}
+        <Note
+          id={note.id}
+          name={note.note_name}
+          modified={note.date_modified}
+          onDeleteNote={this.handleDeleteNote}
       />
       <div className='note_content'>
         {note.content.split(/\n \r|\n/).map((para, i) =>
           <p key={i}>{para}</p>
         )}
-      </div>
-    </section>
-        )}
-    
+       </div>
+     </section>
+    )
+  }
 }

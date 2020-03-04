@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ApiContext from '../../ApiContext';
+import ApiContext from '../ApiContext';
 import './AddFolder.css';
 
 export default class AddFolder extends Component {

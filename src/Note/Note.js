@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FontAweseomIcon } from '@fortawesome/react-fontawesome';
 import { format } from 'date-fns';
-import ApiContext from '../../ApiContext'
+import config from '../config';
+import ApiContext from '../ApiContext'
 
 class Note extends React.Component {
   static contextType = ApiContext;
@@ -37,20 +39,36 @@ class Note extends React.Component {
   
 
   render() {
-    const { name, id, modified } = this.props;
+    const { name, id, modified } = this.props
     return (
-      <div className="note-item">
-        <h2>
+      <div className='Note'>
+        <h2 className='Note__title'>
           <Link to={`/note/${id}`}>
             {name}
           </Link>
         </h2>
-          <p>Modified: {format( modified, 'Do MMM YYYY' )}</p>
-        <button name='delete' onClick={this.handleDelete}>Delete</button>
+        <button
+          className='Note__delete'
+          type='button'
+          onClick={this.handleClickDelete}
+        >
+          <FontAwesomeIcon icon='trash-alt' />
+          {' '}
+          Delete
+        </button>
+        <div className='Note__dates'>
+          <div className='Note__dates-modified'>
+            Modified
+            {' '}
+            <span className='Date'>
+              {format(modified, 'Do MMM YYYY')}
+            </span>
+          </div>
+        </div>
       </div>
     )
   }
-}
+};
 
 
 export default Note;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ApiContext from '../../ApiContext';
+import ApiContext from '../ApiContext';
 import './AddNote.css';
 
 export default class AddNote extends Component {

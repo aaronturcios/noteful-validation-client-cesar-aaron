@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Note from '../Note/Note';
-import ApiContext from '../../ApiContext';
-import {getNotes} from '../../App';
+import ApiContext from '../ApiContext';
+import {getNotes} from '../App';
 import './MainPageList.css'
 
 class MainPageList extends React.Component {
